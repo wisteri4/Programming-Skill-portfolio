@@ -107,7 +107,7 @@ def vending_machine():
             except ValueError:
                 print("Invalid input. Please enter a valid amount.")  #Handle invalid input for payment
     else:
-        print("No items were purchased. Thank you!")  #Else display if no items were selected
+        print("No items were purchased.")  #Else display if no items were selected
 
 #Main program loop to allow multiple shopping sessions
 while True:
