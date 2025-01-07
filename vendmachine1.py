@@ -81,7 +81,7 @@ def vending_machine():
                         print(f"{quantity} {choose[prod][0]} added to your cart.")
                         break  #Exit the quantity input loop
         except ValueError: 
-            print("Invalid input. Please enter a number.")  #Handle invalid input for product code
+            print("Invalid input. Please enter a number.")  #Handle invalid input for product code and quantity
 
     #If the cart is not empty then proceed to payment
     if cart:
