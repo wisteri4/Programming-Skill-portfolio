@@ -107,6 +107,6 @@ while True:
     vending_machine() #Call the vending machine function if user continues to purchase
     another_purchase= input("Enter any key to quit or c to continue to purchase: ").lower()
     if another_purchase != 'c':
-        #Exit and break the loop if the user does not want another purchase 
+        #Exit and break the loop if the user does not want to purchase again
         print("Thank you for using Izabel's machine")
         break
