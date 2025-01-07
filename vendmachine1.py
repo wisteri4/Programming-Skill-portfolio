@@ -1,6 +1,6 @@
 #Display the vending machine items and their prices to the user
 print("""
- ===== Vending Machine =====
+ ===== Izabel's Vending Machine =====
  
     1 - Lays Chips : 4 AED
     2 - Cheetos : 3.50 AED
