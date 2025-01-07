@@ -67,7 +67,6 @@ def vending_machine():
             #Display available stock and prompt the user for the quantity
             print(f"There are {available_stock} {choose[prod][0]} left.")
             while True:
-                try:
                     #Prompt user to specify the quantity they want
                     quantity = int(input(f"How many {choose[prod][0]}: "))
                     if quantity <= 0:
@@ -81,9 +80,6 @@ def vending_machine():
                         cart.append((choose[prod][0], quantity, choose[prod][1]))
                         print(f"{quantity} {choose[prod][0]} added to your cart.")
                         break  #Exit the quantity input loop
-                except ValueError: #If user inputs a symbol or string return with a message 
-                    print("Invalid input. Please enter a number.")  #Handle invalid input for quantity
-
         except ValueError: 
             print("Invalid input. Please enter a number.")  #Handle invalid input for product code
 
@@ -91,8 +87,7 @@ def vending_machine():
     if cart:
         total_cost = display_receipt(cart)  #Display receipt and get total cost
 
-        while True:
-            try:
+        while True:       
                 #Prompt user to insert payment
                 payment = float(input(f"Your total is {total_cost} AED. Please insert the total amount or more: "))
                 if payment < total_cost:
@@ -104,8 +99,6 @@ def vending_machine():
                         print(f"Your change is {change} AED.")
                     print("Thank you for your purchase! Please collect your items below.\n")
                     break  #Exit the payment loop
-            except ValueError:
-                print("Invalid input. Please enter a valid amount.")  #Handle invalid input for payment
     else:
         print("No items were purchased.")  #Else display if no items were selected
 
